@@ -6,6 +6,17 @@ export const API_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNThmYTlhZDI1MGY1NDQ5ZTUxNWQ1NWQzNjJkNGU1MSIsIm5iZiI6MTc1MjkzNzQ5NS4yMzEsInN1YiI6IjY4N2JiNDE3OTBkOWJkNzM5NzhhNDM5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H5K67LW3VqvuQmBAsGt079-vSXqYhgWd_0KU6fcLmrQ'
   }
 };
+export const bg_Url='https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/IN-en-20250707-TRIFECTA-perspective_4faa9280-a2c5-4e07-aafc-a45ce43fea09_large.jpg';
 export const Now_playing_URL = 'https://api.themoviedb.org/3/movie/now_playing?page=1';
+export const Popular_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+export const Toprated_url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+export const Upcoming_url = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
 
+export const IMG_CDN="https://image.tmdb.org/t/p/w780";
+
+export const Supported_Languages=[
+  {identifier:'en',name:'English'},
+  {identifier:'hi',name:'Hindi'},
+  {identifier:'te',name:'Telugu'},
+];
 

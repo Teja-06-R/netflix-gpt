@@ -6,6 +6,7 @@ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } fr
 import {auth} from "../utils/firebase";
 import {  updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
+import { bg_Url } from '../utils/constant';
 
 const Login = () => {
   const dispatch=useDispatch();
@@ -74,7 +75,7 @@ const [errormsg,seterrormsg]=useState(null);
     <div>
         <Header/>
         <div>
-            <img className="absolute" src='https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/IN-en-20250707-TRIFECTA-perspective_4faa9280-a2c5-4e07-aafc-a45ce43fea09_large.jpg'/>
+            <img className="absolute" src={bg_Url}/>
         </div>
         <form onSubmit={(e)=>e.preventDefault()}
         className="relative bg-black/80 p-8 w-full max-w-md text-white rounded-lg top-40 left-134 bg-opacity-30">

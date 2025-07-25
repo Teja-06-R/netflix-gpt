@@ -28,6 +28,17 @@
  - update store sf soters
  - Embedd the youtube video and make it autoplay
  - tailwind classes to make main container look awesome
+ - Build Secondary Component
+ - Build Movie List
+ - build movie card
+ - TMDB image url
+ - Made the browser amazing with tailwind css
+ - usePopularMovies custom hook
+ - GPT search Page
+ - GPT Search Bar
+ - MultiLanguage feature in the App
+ -
+ 
  
  # Features
  -Login/Sign Up
