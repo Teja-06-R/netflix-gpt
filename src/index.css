@@ -1,7 +1,11 @@
 @import "tailwindcss";
 /* hide scrollbar */
+/* In your global CSS or Tailwind config */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 

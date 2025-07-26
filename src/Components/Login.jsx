@@ -74,11 +74,11 @@ const [errormsg,seterrormsg]=useState(null);
   return (
     <div>
         <Header/>
-        <div>
-            <img className="absolute" src={bg_Url}/>
+        <div className='absolute'> 
+            <img className="fixed top-0 left-0 w-full h-[100vh] sm:h-[90vh] md:h-[100vh] object-cover " src={bg_Url}/>
         </div>
         <form onSubmit={(e)=>e.preventDefault()}
-        className="relative bg-black/80 p-8 w-full max-w-md text-white rounded-lg top-40 left-134 bg-opacity-30">
+        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
              <h1 className='font-bold  text-3xl mb-6  px-2 py-2'>{issignInform ? "Sign In" :"Sign Up"}</h1>
              {!issignInform &&  <input ref={name} className="bg-gray-700/60 mb-4 m-2 p-4 w-full placeholder-white mx-1 rounded" type="text" placeholder='Enter your Name'></input>
 

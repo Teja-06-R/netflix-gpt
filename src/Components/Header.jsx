@@ -55,12 +55,12 @@ const Header = () => {
       console.log(e.target.value);
   }
   return (
-    <div className="absolute w-full px-12 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <div>
-        <img className="w-48" src={LOGO} alt="logo" />
+    <div className="absolute w-full px-12 py-1 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <div className="mb-3 md:mb-0">
+        <img className="w-28 sm:w-32 md:w-36 " src={LOGO} alt="logo" />
       </div>
       {user && (
-        <div>
+        <div >
           {showGptSearch && (<select className="bg-gray-950 text-white p-2 mx-2 rounded" onChange={handleOnchange}>
             {Supported_Languages.map((lang)=>(
               <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
@@ -68,14 +68,14 @@ const Header = () => {
             
             </select>)}
           <button
-            className="bg-purple-600 p-2 rounded hover:bg-purple-700 text-white"
+            className="bg-purple-600 p-2 rounded hover:bg-purple-700 text-white transition"
             onClick={handleGptSearch}
           >
             {showGptSearch?"Home ":"GPT Search"}
           </button>
           <button
             onClick={handleSignout}
-            className="p-2 m-4 bg-red-600 rounded-lg hover:bg-red-700 font-semibold text-white  "
+            className="p-2 m-4 bg-red-600 rounded-lg hover:bg-red-700 font-semibold text-white transition "
           >
             Sign out
           </button>
