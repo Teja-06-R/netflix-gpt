@@ -10,10 +10,14 @@ import { LOGO } from "../utils/constant";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { Supported_Languages } from "../utils/constant";
 import { changeLanguage } from "../utils/configSlice";
+import { showmovieDetails } from "../utils/moviesSlice";
+
 
 const Header = () => {
   const user = useSelector((store) => store.user);
+    const ismovieDetails=useSelector(store=>store.movies.movieDetails);
   const showGptSearch=useSelector((store)=>store.GptSearch.showGptSearch);
+  const ismovieDetailshown=useSelector(store=>store.movies.movieDetails);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -49,15 +53,20 @@ const Header = () => {
   };
   const handleGptSearch = () => {
     dispatch(toggleGptSearchView());
+
+    ismovieDetails && dispatch(showmovieDetails());
   };
   const handleOnchange=(e)=>{
     dispatch(changeLanguage(e.target.value));
       console.log(e.target.value);
   }
+  const handleLogo=()=>{
+    dispatch(showmovieDetails());
+  }
   return (
     <div className="absolute w-full px-12 py-1 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
       <div className="mb-3 md:mb-0">
-        <img className="w-28 sm:w-32 md:w-36 " src={LOGO} alt="logo" />
+        <button onClick={handleLogo}><img className="w-28 sm:w-32 md:w-36 " src={LOGO} alt="logo" /></button>
       </div>
       {user && (
         <div >
@@ -65,8 +74,11 @@ const Header = () => {
             {Supported_Languages.map((lang)=>(
               <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
             ))}
-            
             </select>)}
+            {ismovieDetailshown && <button
+            className="bg-blue-500 p-2 mr-2 rounded hover:bg-blue-700 text-white transition"
+            onClick={handleLogo}
+          > Home </button>}
           <button
             className="bg-purple-600 p-2 rounded hover:bg-purple-700 text-white transition"
             onClick={handleGptSearch}

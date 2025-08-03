@@ -21,6 +21,6 @@ const useVideobg=(id)=>{
 
     useEffect(()=>{
      !trailerVideo && getMoviesVideo()
-    },[]);
+    },[id]);
 }
 export default useVideobg;

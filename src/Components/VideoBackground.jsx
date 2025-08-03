@@ -3,8 +3,9 @@ import useVideobg from "../Hooks/useVideobg";
 
 const VideoBackground = (props) => {
     const {id}=props;
+    useVideobg(id);
   const trailerVideo=useSelector((store)=>store.movies?.trailerVideo);
-  useVideobg(id);
+  
 if (!trailerVideo) return null;
   return (
     <div className="w-full aspect-video overflow-hidden">
